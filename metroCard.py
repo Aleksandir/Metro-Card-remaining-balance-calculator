@@ -2,7 +2,7 @@
 # [ ] add feature so below variables can be assigned though user input
 CURRENT_METROCARD_BALANCE = 15.4
 FAIR = 4.20
-REMAINING_BALANCE = 0.4
+REMAINING_BALANCE = 0.2
 
 # below is the working code, do not change unless you know what you're doing
 highBalance = False
@@ -14,12 +14,16 @@ while not runningBalance % FAIR < REMAINING_BALANCE:
 
     runningBalance += 15
 
-    if runningBalance > 500:
-        print(
-            "The balance required is over $500, which is not realistic, please increase the remaining balance allowed"
-        )
-        highBalance = True
+    print(runningBalance)
+    if runningBalance > 9999999:
         break
+
+    # if runningBalance > 500:
+    #     print(
+    #         "The balance required is over $500, which is not realistic, please increase the remaining balance allowed"
+    #     )
+    #     highBalance = True
+    #     break
 
 if highBalance != True:
     print(
